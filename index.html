@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IC3INS-2027 — International Conference on Computational Intelligence and Networked Systems</title>
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23012e55'/%3E%3Ccircle cx='50' cy='42' r='16' fill='%23ff5f19'/%3E%3Crect x='30' y='66' width='40' height='9' rx='4.5' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <style>
+    .home-hero {
+      padding: 120px 0 80px;
+    }
+
+    .home-hero h1 {
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      line-height: 1.1;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .home-hero h1 span {
+      color: var(--orange);
+    }
+
+    .home-hero .lead {
+      max-width: 60ch;
+      margin: 22px auto 0;
+      color: var(--ink-soft);
+      font-size: 1.1rem;
+    }
+
+    .home-hero .theme-tag {
+      max-width: 70ch;
+      margin: 0 auto 22px;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--ink-soft);
+    }
+
+    .home-hero .theme-tag span {
+      color: var(--orange);
+    }
+
+    .facts-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      max-width: 1000px;
+      margin: 50px auto 0;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+
+    .facts-row .fact {
+      padding: 24px 20px;
+      text-align: center;
+      border-right: 1px solid var(--line);
+    }
+
+    .facts-row .fact:last-child {
+      border-right: none;
+    }
+
+    .facts-row .fact i {
+      color: var(--orange);
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .facts-row .fact .lbl {
+      font-size: .68rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--ink-soft);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .facts-row .fact .val {
+      font-weight: 700;
+      color: var(--navy);
+      font-size: .92rem;
+    }
+
+    @media(max-width:760px) {
+      .facts-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="brand">
+      <img src="assets/img/geeta-university-logo.png" alt="Geeta University">
+      <div class="brand-sep"></div>
+      <img src="assets/img/ic2ins-logo.jpeg" alt="IC3INS-2027" style="height:36px;">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li class="has-dropdown">
+        <button class="nav-drop-btn">Author <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="dropdown-menu">
+          <a href="call-for-papers.html"><i class="fa-solid fa-bullhorn"></i>Call for Papers</a>
+          <a href="paper-submission-guidelines.html"><i class="fa-solid fa-file-arrow-up"></i>Paper Submission
+            Guidelines</a>
+
+          <a href="index.html#important-dates"><i class="fa-solid fa-calendar-days"></i>Proposed Date</a>
+          <a href="camera_ready_submission.html"><i class="fa-solid fa-bullhorn"></i>Camers ready submission</a>
+          <a href="index.html#registration-dates"><i class="fa-solid fa-user-check"></i>Registration Details</a>
+        </div>
+      </li>
+      <li><a href="committee.html">Committee</a></li>
+      <li><a href="index.html#speakers">Speakers</a></li>
+      <li><a href="cmt-acknowledgement.html">CMT Acknowledgement</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <!-- MOBILE MENU OPEN BUTTON -->
+    <button class="burger" id="burger" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-top">
+      <div class="brand"><img src="assets/img/ic2ins-logo.jpeg" alt="IC3INS-2027" style="height:34px;"></div>
+      <button class="burger" id="closeBurger"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <div class="mobile-drop">
+      <a href="javascript:void(0)" class="mobile-toggle">Author <i
+          class="fa-solid fa-chevron-down mobile-toggle-caret"></i></a>
+      <div class="mobile-sub">
+        <a href="call-for-papers.html">Call for Papers</a>
+        <a href="paper-submission-guidelines.html">Paper Submission Guidelines</a>
+
+        <a href="index.html#important-dates">Proposed Date</a>
+        <a href="camera_ready_submission.html">Camers ready submission</a>
+        <a href="index.html#registration-dates">Registration Details</a>
+      </div>
+    </div>
+    <a href="committee.html">Committee</a>
+    <a href="index.html#speakers">Speakers</a>
+    <a href="cmt-acknowledgement.html">CMT Acknowledgement</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+  <main>
+    <section class="page-hero home-hero">
+      <div class="dotgrid"></div>
+      <div class="blob blob1"></div>
+      <div class="blob blob2"></div>
+      <div class="wrap hero-grid">
+
+        <div class="hero-col hero-text">
+          <div class="hero-badges reveal">
+            <span class="pill"><i class="fa-solid fa-graduation-cap"></i>School of Computer Science &amp; Engineering,
+              Geeta University</span>
+          </div>
+          <p class="theme-tag reveal" style="text-align: left !important;">THEME: <span>Advancing Intelligent and
+              Connected Computing for Next-Generation Digital Transformation</span></p>
+          <span class="reveal"><strong>IC3INS-2027</strong></span>
+          <h1 class="reveal">1st International Conference on<br><span> Computing, Communication, Intelligence &
+              Networked Systems</span></h1>
+
+          <h5 class="lead reveal" style="color: var(--navy);">Technically Co-Sponsored by IEEE CS (Subject to Approval)
+          </h5>
+          <p class="lead reveal" style="color: var(--navy);">Organised By
+            School of CSE, Geeta University</p>
+
+          <div class="btn-row reveal" style="margin-top: 10px;">
+            <a class="btn btn-primary" href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2Fic2ins2027"><i
+                class="fa-solid fa-file-arrow-up"></i>Submit Paper Online</a>
+          </div>
+        </div>
+
+        <div class="hero-col hero-facts-card reveal">
+
+          <div class="fact" style="background-color: var(--navy);"><i class="fa-solid fa-calendar-days"></i><span
+              class="" style="color: var(--white);">Dates</span><span class="" style="color: var(--white);">12–13
+              November 2027</span></div>
+
+          <div class="factM">
+            <div class="fact">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i><span class="lbl">Publication</span><span
+                class="val">IEEE Xplore (subject to approval)</span>
+            </div>
+          </div>
+
+          <div class="fact">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="lbl">Venue</span><span class="val">Hybrid (In-person & Virtual) at <br> Geeta University,
+              Naultha, Panipat, Haryana
+              132145</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="sect" id="about">
+      <div class="wrap">
+        <div class="sect-head reveal">
+          <h2>About IC3INS-2027</h2>
+        </div>
+        <div class="prose reveal">
+          <p><b>Welcome to IC3INS-2027:</b> the 1st International Conference on Computing, Communication, Intelligence &
+            Networked Systems, organised by the School of Computer Science and Engineering, on 12th–13th November 2027
+            at Geeta University, Campus – Panipat, Haryana, India.</p>
+          <p>
+            IC3INS-2027 is a premier international event aimed at fostering innovation, collaboration and knowledge
+            exchange in the fields of computing, communication, intelligent computing, artificial intelligence and
+            networked technologies. The conference serves as a multidisciplinary platform for researchers, academicians,
+            industry professionals and scholars to present their latest findings, discuss emerging trends and explore
+            future directions in intelligent computing, communication technologies and networked systems. In a world
+            increasingly driven by automation, digital transformation and smart systems, IC3INS-2027 addresses the
+            pressing need to integrate intelligent computing, advanced communication and connected technologies to solve
+            complex, real-world problems.</p>
+          <p>The conference encourages a synergistic blend of theory and application, with an emphasis on impactful,
+            interdisciplinary research that can drive advancements in areas such as healthcare, smart cities,
+            cybersecurity, IoT, intelligent systems and autonomous technologies. IC3INS-2027 is committed to academic
+            excellence and aims to promote international collaboration by connecting participants with global thought
+            leaders, encouraging thought-provoking discussion, and contributing to the evolution of next-generation
+            computing, communication and intelligent networked systems.</p>
+          <p><b>All the accepted and presented papers in the Conference will be submitted to IEEE Xplore for possible
+              inclusion in its digital library. (Subject to Approval)</b></p>
+
+          <h3>Conference Objectives</h3>
+          <p>IC3INS-2027 aims to promote high-quality research and facilitate the exchange of innovative ideas, emerging
+            trends, and technological advancements in computing, communication, intelligence, artificial intelligence,
+            and networked systems. The conference seeks to create a dynamic platform for researchers, academicians,
+            industry professionals, and innovators to address contemporary challenges and explore future opportunities
+            in intelligent and connected technologies.
+          </p>
+          <!-- <p>The key objectives of the conference include:</p> -->
+          <ul>
+            <li>Fostering interdisciplinary collaboration across computing, communication, artificial intelligence,
+              machine learning, data analytics, intelligent systems, IoT, edge computing, and emerging smart
+              technologies.</li>
+            <li>Promoting cutting-edge research and innovation in intelligent, adaptive, scalable, secure, and
+              sustainable computing, communication, and networked systems.</li>
+            <li>Bridging theoretical research with real-world applications through practical solutions and innovative
+              implementations in areas such as smart cities, healthcare, industry, communication, and connected
+              environments. </li>
+            <li>Encouraging knowledge exchange and global collaboration among researchers, academicians, industry
+              experts, practitioners, and young scholars.</li>
+            <li>Exploring emerging challenges and future directions in next-generation computing, intelligent systems,
+              autonomous technologies, intelligent perception, communication, and networked technologies.</li>
+            <li>Facilitating industry–academia interaction to develop solution-oriented research addressing current
+              industrial, technological, and societal needs.</li>
+
+          </ul>
+
+          <p>IC3INS-2027 aspires to serve as a premier global platform for exploring transformative research and
+            emerging technologies in computing, communication, intelligence, artificial intelligence, and networked
+            systems. The conference will feature keynote addresses, technical paper presentations, interactive sessions,
+            workshops, and panel discussions led by distinguished researchers and industry experts.</p>
+          <p>We warmly invite researchers, academicians, scholars, innovators, and industry professionals from across
+            the globe to participate in this exciting forum and contribute to advancing innovation, academic excellence,
+            knowledge exchange, and international collaboration in intelligent computing, communication, and networked
+            technologies.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sect">
+      <div class="wrap">
+        <div class="reg-dates-stack">
+          <!-- Important Dates -->
+          <div class="reg-block reveal" id="important-dates">
+            <h2 style="margin-bottom:22px;">Important Dates</h2>
+            <div class="reg-table-scroll">
+              <table class="dates-table">
+                <thead>
+                  <tr>
+                    <th>Activity</th>
+                    <th>Proposed Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Paper Submission Start</td>
+                    <td>10 November 2026</td>
+                  </tr>
+                  <tr>
+                    <td>Paper Submission Deadline</td>
+                    <td>30 April 2027</td>
+                  </tr>
+                  <tr>
+                    <td>First Review Notification</td>
+                    <td>05 May 2027</td>
+                  </tr>
+                  <tr>
+                    <td>Revised Paper Submission</td>
+                    <td>25 June 2027</td>
+                  </tr>
+                  <tr>
+                    <td>Final Acceptance Notification</td>
+                    <td>5 August 2027</td>
+                  </tr>
+                  <tr>
+                    <td>Camera Ready Paper Submission</td>
+                    <td>20 September 2027</td>
+                  </tr>
+                  <tr>
+                    <td>Author Registration Deadline</td>
+                    <td>20 September 2027</td>
+                  </tr>
+                  <tr>
+                    <td>Conference Dates</td>
+                    <td><b>12–13 November 2027</b></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="reg-note" style="margin-top:22px;">In case of any query, please drop an email to
+              <a href="mailto:iccins@geetauniversity.edu.in"
+                style="color:var(--orange); font-weight:700;">meenu.gupta@geetauniversity.edu.in</a>
+            </p>
+          </div>
+
+          <!-- Registration Details -->
+          <div class="reg-block reveal" id="registration-dates">
+            <h2 style="margin-bottom:22px;">Registration Details</h2>
+            <div class="reg-table-scroll">
+              <table class="reg-table">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th colspan="3">For Indian Authors<br>and Delegates (in INR)</th>
+                    <th colspan="3">For Foreign Authors<br>and Delegates (in USD)</th>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <th>IEEE Member</th>
+                    <th>IEEE CS Member</th>
+                    <th>General</th>
+                    <th>IEEE Member</th>
+                    <th>IEEE CS Member</th>
+                    <th>General</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Full-Time Students (Graduate)</th>
+                    <td><b>8,000</b></td>
+                    <td><b>7,000</b></td>
+                    <td><b>9,500</b></td>
+                    <td><b>220</b></td>
+                    <td><b>200</b></td>
+                    <td><b>250</b></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Faculty &amp; Research Scholars</th>
+                    <td><b>9,000</b></td>
+                    <td><b>8,000</b></td>
+                    <td><b>10,500</b></td>
+                    <td><b>250</b></td>
+                    <td><b>220</b></td>
+                    <td><b>300</b></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Industry</th>
+                    <td><b>10,000</b></td>
+                    <td><b>9,000</b></td>
+                    <td><b>11,500</b></td>
+                    <td><b>350</b></td>
+                    <td><b>300</b></td>
+                    <td><b>400</b></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Attendee only</th>
+                    <td>1,000</td>
+                    <td>900</td>
+                    <td>1500</td>
+                    <td>50</td>
+                    <td>45</td>
+                    <td>70</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="reg-note">NOTE - At least one of the authors of the paper has to register for the conference. It
+              is
+              mandatory to present the paper in the conference for the inclusion of the paper in the conference
+              proceedings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sect" id="speakers">
+      <div class="wrap">
+        <div class="sect-head reveal">
+          <h2>Speakers</h2>
+        </div>
+        <div class="fig-grid reveal" id="speakerGrid"></div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div class="foot-grid">
+          <div class="fcol">
+            <h6>Quick Links</h6>
+            <a href="index.html#about">IC3INS 2027</a>
+            <a href="call-for-papers.html">Call for papers</a>
+            <a href="paper-submission-guidelines.html">Submission Guidelines</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+          <div class="fcol">
+            <h6>Get In Touch</h6>
+            <div class="contact-line"><i class="fa-solid fa-user"></i><span>Dr. Meenu Gupta</span></div>
+            <div class="contact-line"><i class="fa-solid fa-phone"></i><span>+91 8708951544</span></div>
+            <div class="contact-line"><i
+                class="fa-solid fa-envelope"></i><span>meenu.gupta@geetauniversity.edu.in</span></div>
+          </div>
+          <div class="fcol">
+            <h6>Prof. Kriti Gupta</h6>
+            <div class="contact-line"><i class="fa-solid fa-phone"></i><span>6386681196</span></div>
+          </div>
+          <div class="fcol">
+            <div class="map-frame-footer">
+              <iframe src="https://www.google.com/maps?q=Geeta+University+Panipat&output=embed" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" title="Geeta University, Panipat location"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="fbar">
+          <span>© 2027 IC2INS. All rights reserved. School of Computer Science &amp; Engineering, Geeta
+            University</span>
+        </div>
+      </div>
+    </footer>
+
+
+  </main>
+
+  <script>
+    const speakers = [
+      //["Prof. (Dr.) Valentina E. Balas", "Full Professor, Faculty of Engineering, \u201cAurel Vlaicu\u201d University of Arad, Romania · IEEE Senior Member", "assets/img/Valentina-Balas.jpg"],
+      ["Dr. Abdul Razaque", "IEEE Senior Member, Department of Computer Science and Information Sciences, Arkansas Tech University Russellville, AR, USA", "assets/img/Prof-Abdul-Razaque.png"],
+      //["Prof. (Dr.) Ahmed J. Obaid", "Faculty of Computer Science and Mathematics, University of Kufa, Najaf, Iraq", "assets/img/Ahmed-J.-Obaid.jpg"],
+      ["Prof. (Dr.) Ajith Abraham", "Vice Chancellor, Sai University, Chennai · Founding Director, Machine Intelligence Research Labs (MIR Labs), Seattle, USA · IEEE Senior Member", "assets/img/Ajit-abraham.png"],
+      ["Dr. Jose Berengueres", "IEEE Senior Member, School of Computing and Artificial Intelligence, Nazarbayev University, Astana, Kazakhstan", "assets/img/Jose-Berengueres.jpeg"],
+      ["Dr. Akshi Kumar", "Associate Professor & Director – Postgraduate Research, Department of Computing, Goldsmiths, University of London, UK · IEEE Senior Member", "assets/img/akshi-kumar.jpg"],
+      //["Prof. (Dr.) Sarabjot Singh", "Adjunct Faculty, IISER Mohali & GNDEC, Ludhiana", "assets/img/Sarab-Sir.jpg"]
+    ];
+    const gradients = ["linear-gradient(135deg,#012e55,#024a82)", "linear-gradient(135deg,#ff5f19,#ff8c52)"];
+    const grid = document.getElementById('speakerGrid');
+    speakers.forEach((s, i) => {
+      const initials = s[0].replace(/^(Prof\.|Dr\.|\(Dr\.\))\s*/g, '').replace(/[()]/g, '').split(' ').filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase();
+      const imgPath = s[2];
+      const card = document.createElement('div');
+      card.className = 'fig-card';
+      card.innerHTML = `
+      <div class="fig-photo" style="background:${gradients[i % 2]}; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+        <img src="${imgPath}" alt="${s[0]}" style="width:100%; height:100%; object-fit:cover;"
+          onerror="this.replaceWith(Object.assign(document.createElement('span'), {textContent:'${initials}', style:'font-family:\\'Space Grotesk\\',sans-serif; font-size:2.4rem; font-weight:700; color:#fff;'}))">
+      </div>
+      <div class="fig-cap"><h4>${s[0]}</h4><p>${s[1]}</p></div>`;
+      grid.appendChild(card);
+    });
+  </script>
+  <script src="assets/js/mains.js"></script>
+
+
+</body>
+
+</html>
